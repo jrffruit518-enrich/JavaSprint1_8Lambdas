@@ -23,7 +23,9 @@ public class ListContains_oMain {
     }
 
     public static  List<String> listContainsO(List<String> list) {
-
+        if (list== null) {
+            throw new IllegalArgumentException("The list can't be null.");
+        }
         return list.stream().filter(s -> s!=null && s.toLowerCase().contains("o")).collect(Collectors.toList());
     }
 
