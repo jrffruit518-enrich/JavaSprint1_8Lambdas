@@ -1,8 +1,8 @@
 package sprint1Tasca_S108Nivell1_3;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
-import java.util.List;
+
 
 /**
  * ClassName: MonthPrint
@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class MonthPrint {
     public static void main(String[] args) {
-        Arrays.stream(MonthLambdas.values()).map(MonthLambdas::getName ).forEach(System.out::println);
+        Arrays.stream(MonthLambdas.values()).map(month->month.getName() ).forEach(name -> System.out.println(name));
     }
 
 }
