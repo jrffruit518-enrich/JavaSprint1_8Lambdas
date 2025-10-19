@@ -2,6 +2,7 @@ package sprint1Tasca_S108Nivell1_6;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 public class CadenaSort {
     public static void main(String[] args) {
         List<Object> list = new ArrayList<>(Arrays.asList(12,"baby","center",256,"hello",38,"good"));
-        List<Object> listResult = list.stream().filter(o -> o instanceof String).sorted((o1, o2)-> Integer.compare(((String) o1).length(), ((String) o2).length())).collect(Collectors.toList());
+        List<Object> listResult = list.stream().filter(o -> o != null && o instanceof String).sorted(Comparator.comparingInt(o -> ((String) o).length())).collect(Collectors.toList());
         listResult.forEach(System.out::println);
     }
 }
