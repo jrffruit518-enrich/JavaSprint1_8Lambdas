@@ -14,12 +14,7 @@ import java.util.List;
  */
 public class MonthPrint {
     public static void main(String[] args) {
-        var months = new ArrayList<>(Arrays.asList(MonthLambdas.values()));
-        print(months);
-
+        Arrays.stream(MonthLambdas.values()).map(MonthLambdas::getName ).forEach(System.out::println);
     }
 
-    public static void print(List months) {
-        months.forEach(System.out::println);
-    }
 }
