@@ -20,6 +20,6 @@ public class MonthPrint {
     }
 
     public static void print(List months) {
-        months.forEach(month-> System.out.println());
+        months.forEach(System.out::println);
     }
 }
